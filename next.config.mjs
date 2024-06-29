@@ -5,8 +5,6 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    assetPrefix: isProd ? '/website/' : '',
-    basePath: isProd ? '/website' : '',
     trailingSlash: true,
 };
 
