@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         <Link href="/" className={styles.navbarItem}>Home</Link>
         <Link href="/about" className={styles.navbarItem}>About</Link>
         <Link href="/services" className={styles.navbarItem}>Services</Link>
-        <Link href="/contact" className={styles.navbarItem}>Contact</Link>
+        <Link href="/contacts" className={styles.navbarItem}>Contact</Link>
       </div>
       <div className={styles.navbarToggle} onClick={toggleMenu}>
         <span className={styles.bar}></span>
