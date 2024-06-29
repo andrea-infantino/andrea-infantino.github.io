@@ -24,13 +24,10 @@ jobs:
     - name: Build the project
       run: npm run build
 
-    - name: Export the project
-      run: npm run export
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
-        # publish_branch: gh-pages # Uncomment if you need to specify a different branch
+        publish_branch: gh-pages # Uncomment if you need to specify a different branch
         # cname: example.com # Uncomment if you use a custom domain
