@@ -1,7 +1,5 @@
-"use client";
-
 import React, {useState} from 'react';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import styles from '../styles/Navbar.module.css';
 
 const Navbar: React.FC = () => {
@@ -13,17 +11,41 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={styles.navbar}>
-      <Link href="/" className={styles.navbarLeft}>
+      <Link to="home"
+        smooth={true}
+        duration={500}
+        spy={true}
+        className={styles.navbarLeft}>
         <div className={styles.profileImageContainer}>
           <img src="/images/profile.jpg" alt="Profile" className={styles.profileImage} />
         </div>
         <div className={styles.navbarTitle}>ANDREA INFANTINO</div>
       </Link>
       <div className={`${styles.navbarMenu} ${isOpen ? styles.open : ''}`}>
-        <Link href="/" className={styles.navbarItem}>Home</Link>
-        <Link href="/about" className={styles.navbarItem}>About</Link>
-        <Link href="/services" className={styles.navbarItem}>Services</Link>
-        <Link href="/contacts" className={styles.navbarItem}>Contact</Link>
+        <Link to="home"
+          smooth={true}
+          duration={500}
+          spy={true}
+          className={styles.navbarItem}
+          activeClass={styles.active}>Home</Link>
+        <Link to="about"
+          smooth={true}
+          duration={500}
+          spy={true}
+          className={styles.navbarItem}
+          activeClass={styles.active}>About</Link>
+        <Link to="services"
+          smooth={true}
+          duration={500}
+          spy={true}
+          className={styles.navbarItem}
+          activeClass={styles.active}>Services</Link>
+        <Link to="contacts"
+          smooth={true}
+          duration={500}
+          spy={true}
+          className={styles.navbarItem}
+          activeClass={styles.active}>Contacts</Link>
       </div>
       <div className={styles.navbarToggle} onClick={toggleMenu}>
         <span className={styles.bar}></span>

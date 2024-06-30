@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 0;
+  color: #ffa500;
+}
+
+.description {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.presentation {
+  width: 40%;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.mainImage {
+  width: 40%;
+  margin-left: 5rem;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.7)); 
+}
+
+.button {
+  padding: 10px 20px;
+  margin-top: 2rem;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+  text-shadow: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff7b00;
+}

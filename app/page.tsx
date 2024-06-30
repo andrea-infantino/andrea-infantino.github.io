@@ -1,28 +1,26 @@
 "use client";
 
-import Layout from '../components/Layout';
-import styles from '../styles/page.module.css';
-import { useRouter } from 'next/navigation';
+import Home from '../app/Home';
+import About from '../app/About';
+import Navbar from '../components/Navbar';
 
-export default function Home() {
-  const router = useRouter();
+import '../styles/globals.css';
+import { Open_Sans } from 'next/font/google'
 
-  const handleClick = () => {
-      router.push('/contacts');
-  };
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '300'
+})
 
+const App: React.FC = () => {
   return (
-    <Layout>
-      <div className={styles.container}>
-        <div className={`${styles.presentation} slide-in`}>
-          <span className={styles.description}>Hello there! I'm<br />
-          <span className={styles.title}>ANDREA INFANTINO</span><br />
-          Double Master's Student in Computer Science & Engineering | Politecnico di Milano & UIC | Aspiring Cybersecurity Expert & Software Developer<br />
-          <button className={styles.button} onClick={handleClick}>Connect with me!</button>
-          </span>
-        </div>
-        <img src="/images/mainImage.png" alt="Profile" className={`${styles.mainImage} slide-in`} />
+      <div className={`${openSans.className} app`}>
+          <Navbar />
+          <Home />
+          <About />
       </div>
-    </Layout>
   );
 }
+
+export default App;

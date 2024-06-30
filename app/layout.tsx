@@ -1,24 +1,16 @@
-import '../styles/globals.css';
-import Navbar from '../components/Navbar';
-import styles from '../styles/Layout.module.css';
+export const metadata = {
+  title: 'Andrea Infantino',
+  description: 'Andrea Infantinoàs personal website!',
+}
 
-import { Open_Sans } from 'next/font/google'
-
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '300'
-})
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className={openSans.className}>
-      <body>
-        <div className={styles.container}>
-          <Navbar />
-          <main className={styles.main}>{children}</main>
-        </div>
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
-  );
+  )
 }
