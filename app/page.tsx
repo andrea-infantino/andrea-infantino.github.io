@@ -1,7 +1,7 @@
 "use client";
 
-import Home from '../app/Home';
-import About from '../app/About';
+import Home from '../app/home';
+import About from '../app/about';
 import Navbar from '../components/Navbar';
 
 import '../styles/globals.css';
