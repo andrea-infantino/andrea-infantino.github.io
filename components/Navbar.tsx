@@ -14,7 +14,6 @@ const Navbar: React.FC = () => {
       <Link to="home"
         smooth={true}
         duration={500}
-        spy={true}
         className={styles.navbarLeft}>
         <div className={styles.profileImageContainer}>
           <img src="/images/profile.jpg" alt="Profile" className={styles.profileImage} />
