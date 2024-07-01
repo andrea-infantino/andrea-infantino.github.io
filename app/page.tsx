@@ -1,5 +1,7 @@
 "use client";
 
+import { Element } from 'react-scroll';
+
 import Home from '../app/home';
 import About from '../app/about';
 import Navbar from '../components/Navbar';
@@ -17,8 +19,12 @@ const App: React.FC = () => {
   return (
       <div className={`${openSans.className} app`}>
           <Navbar />
-          <Home />
+          <Element name="home">
+            <Home />
+          </Element>
+          <Element name="about">
           <About />
+          </Element>
       </div>
   );
 }
